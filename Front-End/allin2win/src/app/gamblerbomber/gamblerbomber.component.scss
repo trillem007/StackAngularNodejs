@@ -1,0 +1,124 @@
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Tapestry&display=swap');
+
+// body {
+//     background-color: black;
+// }
+
+
+// nav a {
+//     text-decoration: none;
+//     padding: 1%;
+//     color: white;
+//     font-family: 'Tapestry', cursive;
+//     font-size: 18px;
+
+
+// }
+
+// nav a:hover {
+//     background-color: rgb(161, 87, 87);
+// }
+
+
+
+// /* ################# */
+
+// #logo {
+//     margin: 5px;
+//     width: 5%;
+//     border-radius: 150%;
+// }
+
+
+// #wallpaper_home{
+//     width: 100%;
+//     filter: blur(3px);
+//     z-index: 1;
+
+// }
+
+// #logo_home { 
+//     width: 20%;
+//     position: relative;
+//     bottom: 65em;
+//     border-radius: 150%;
+//     margin-left: 40%;
+//     opacity: 0.8;
+//     animation: mymove 5s;
+    
+// }
+
+// #imageUser {
+//     width: 60px; 
+//     height: 60px; 
+//     border-radius: 150px;
+//     margin-left: 50%;
+// }
+
+
+// #userContent {
+//     margin-left: 40%;
+// }
+
+// #userContent img {
+//     position: relative;
+//     bottom: 2.5em;
+//     right: 5em;   
+ 
+// }
+
+// #userContent a {
+//     position: relative;
+//     top: 2.5em;
+//     left: 1em;    
+// }
+
+// #userContent p {
+//     position: relative;
+//     top: 2.5em;
+//     left: 2em;    
+// }
+
+// #token {
+//     width: 1%;
+//     position: relative;
+//     right: 3.2em;
+//     top: 1em;
+// }
+
+
+
+// @media only screen and (min-width: 400px) and (max-width: 1900px) {
+//     #userContent {
+//         position: relative;
+//         right: 20em;
+        
+//     }
+
+//     section {
+//         position: relative;
+//         top: 1em;
+//     }
+
+//     #token {
+//         width: 1%;
+//         position: relative;
+//         right: 23em;
+//     }
+
+// }
+
+// @media only screen and (min-width: 200px) and (max-width: 400px) {
+//     #userContent {
+//         position: relative;
+//         left: 50em;
+        
+//     }
+
+// }
+
+
+.img-fluid{
+    height: 100%;
+    width: 100%;
+}

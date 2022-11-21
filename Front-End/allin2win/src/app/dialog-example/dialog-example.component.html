@@ -1,0 +1,13 @@
+<div class="container" [formGroup]="form">
+<h1 mat-dialog-title>Bienvenido! </h1>
+<div mat-dialog-content>
+  <p>Cuanto quieres apostar?</p>
+  <p><b>Tus puntos: {{data.maxapostables}}</b></p>
+   <mat-form-field>
+    <input type="number" matInput [(ngModel)]="data.quantitat"  formControlName="tokens" class="form-control" placeholder="" required="">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.quantitat" [disabled]="form.invalid">Jugar</button>
+  <button mat-button (click)="onNoClick()">Salir</button>
+</div></div>

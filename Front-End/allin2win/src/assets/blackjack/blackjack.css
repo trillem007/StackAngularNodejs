@@ -1,0 +1,755 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* background-color: sienna; */
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  background-color: #016D29;
+  /* height: 470px; */
+  height: 90vh;
+  min-width: 500px;
+  padding: 20px;
+  color: #fff;
+  /* width: scale(calc(100% * 1));
+  transform: scale(75%); */
+}
+
+#deckCard {
+  position: relative;
+  height: 175px;
+  width: 125px;
+}
+
+#deck_div {
+  position: absolute;
+  margin-left: 66%;
+  margin-top: 50px;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 15px;
+  border: 1px solid white;
+  /* transform: scale(0.5); */
+}
+
+#dealer {
+  position: absolute;
+  margin-left: 0;
+}
+
+#dealer-cards {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 50px;
+}
+
+#dealer-cards img {
+
+  height: 175px;
+  width: 125px;
+  /* height: 150px;
+    width: 110px; */
+}
+
+#you {
+  position: absolute;
+  margin-left: 0;
+
+  margin-top: 270px;
+}
+
+#your-cards {
+
+  position: absolute;
+  margin-left: 0;
+  margin-top: 300px;
+  
+  /* max-width: 500px; */
+}
+
+#your-cards img {
+  height: 175px;
+  width: 125px;
+  
+  /* width: calc(90% - 125px); */
+}
+
+.playerActions {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 500px;
+}
+
+#hit,
+#stay,
+#double {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+#hit {
+  background-color: green;
+}
+
+#stay {
+  background-color: red;
+}
+
+#double {
+  background-color: #0044ff;
+}
+
+#play {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: yellow;
+}
+
+#hit:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+#stay:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+#double:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+#play:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+
+
+body {
+  font-family: sans-serif;
+}
+
+.scene {
+  width: 200px;
+  height: 300px;
+  /* border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  /* background: red; */
+}
+
+.card__face--back {
+  /* background: blue; */
+  transform: rotateY(180deg);
+}
+
+
+
+#instructions {
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  background-color: #000000;
+  /* background-color: #ba1396; */
+  z-index: 11;
+  border: 4px solid #d3b201;
+  border-radius: 12px;
+
+  transition: 1s;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+.close_div {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* padding: 30px; */
+  width: 30px;
+  height: 30px;
+  margin: 25px 25px 0 420px;
+  font-size: 20px;
+  border: 2px solid #d3b201;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.close_div:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  border: 2px solid #d3b201;
+  border-radius: 12px;
+
+}
+
+.instructions_div {
+  display: block;
+  position: relative;
+  top: 105px;
+  font-size: 20px;
+  text-align: center;
+  /* overflow-x: hidden;
+              overflow-y: auto; */
+  overflow: auto;
+  height: 320px;
+  padding: 40px;
+
+
+}
+
+
+.instructions_div::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+.instructions_div::-webkit-scrollbar-track {
+  background: black;
+
+}
+
+.instructions_div::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 2px solid #d3b201;
+}
+
+.instructionsTitle {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  top: 25px;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  /* border: 1px solid #d3b201; */
+}
+
+
+
+
+.instructionsTxt {
+  padding: 20px;
+  padding-top: 0;
+  font-size: 15px;
+  line-height: 2px;
+
+
+}
+
+.instructionsTaulaInt th,
+td {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+.instructionsTaulaExt th,
+td {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+.instructionsBtn {
+  position: absolute;
+  margin-top: 225px;
+  margin-left: -65%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: calc(95% - 21px);
+  /* height: calc(33% - 15px); */
+  padding: 7px;
+  /* align-items: center; */
+  width: 200px;
+  /* height:39px; */
+  height: 30px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: inset -2px -4px rgb(0 0 0 / 20%);
+}
+
+.instructionsBtn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.instructionsBtnSpan {
+  position: absolute;
+  font-size: 18px;
+  /* margin-left: 7px; */
+  margin-top: -3px;
+  /* padding: 5px; */
+}
+
+
+.bets {
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 65%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: calc(95% - 21px);
+  padding: 7px;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: inset -2px -4px rgb(0 0 0 / 20%);
+}
+
+.bets:hover {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.betsSpan {
+  position: absolute;
+  font-size: 18px;
+  /* margin-left: 7px; */
+  margin-top: -100px;
+  /* padding: 5px; */
+}
+
+
+.bankContainer {
+  margin-top: 50px;
+  position: absolute;
+  margin-left: -65%;
+  width: 310px;
+  /* height:39px; */
+  height: 150px;
+  padding: 3px 0;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: inset -2px -4px rgb(0 0 0 / 20%);
+}
+
+.bank_title {
+  display: inline-block;
+  width: calc(50% - 21px);
+  font-size: 18px;
+  margin-left: 7px;
+  border-radius: 7px;
+  text-align: right;
+  margin-left: 7px;
+  padding: 5px;
+}
+
+.bank,
+.bet,
+.lastBet,
+.profit {
+  display: inline-block;
+  width: calc(50% - 28px);
+  background-color: #000;
+  font-size: 18px;
+  margin-left: 7px;
+  padding: 5px;
+  border: 3px solid silver;
+  border-radius: 7px;
+  text-align: right;
+}
+
+
+.chipDeck {
+  position: absolute;
+  margin-left: -65%;
+  margin-top: 300px;
+  width: 310px;
+  height: 150px;
+  padding: 3px 0;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: inset -2px -4px rgb(0 0 0 / 20%);
+}
+
+.cdChip {
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border: 5px dashed white;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 12px;
+  color: #000;
+  cursor: pointer;
+  margin-top: 5px;
+  /* border: 5px dashed white; */
+}
+
+.cdChipSpan {
+  display: inherit;
+  position: relative;
+  top: 5px;
+  width: 26px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.cdChipActive {
+  /* transition: 0.2s; */
+  position: relative;
+  top: -4px;
+  box-shadow: 0 4px rgb(0 0 0 / 20%);
+  transform: scale(1.2);
+
+
+}
+
+.clearBet {
+  border-color: red;
+  background-color: red;
+  color: #fff;
+  /* margin-left:22px; */
+  /* margin-left: 182px; */
+  /* margin-top: 2px; */
+}
+
+.clearBet .cdChipSpan {
+  margin-left: -2px;
+}
+
+
+.chip {
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border: 4px dashed white;
+  border-radius: 100%;
+  /* transform: rotate(90deg); */
+  position: absolute;
+}
+
+.chip2 {
+  /* PLAQUES */
+  width: 30px;
+  height: 21px;
+  background-color: #fff;
+  border: 3px dashed white;
+  border-radius: 15%;
+  transform: rotate(-90deg) translateY(-5px);
+  margin-left: -20px;
+  position: absolute;
+}
+
+
+.chipSpan {
+  color: #000;
+  font-weight: bold;
+  font-size: 11px;
+  position: relative;
+  display: block;
+  text-align: center;
+  top: 4px;
+}
+
+/* COLORS FITXES */
+
+.gold {
+  border-color: gold;
+}
+
+.red {
+  border-color: red;
+}
+
+.orange {
+  border-color: orange;
+}
+
+.blue {
+  border-color: blue;
+}
+
+.purple {
+  border-color: purple;
+}
+
+.green {
+  border-color: lime;
+}
+
+.black {
+  border-color: black;
+}
+
+.pink {
+  border-color: rgb(255, 0, 179);
+}
+
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 12px;
+
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+
+.tooltipChipSpan {
+  position: absolute;
+  font-size: 12px;
+  margin: 0;
+  margin-left: -2px;
+  margin-top: -14px;
+  ;
+  background-color: transparent;
+}
+
+.tooltipBetText {
+  visibility: hidden;
+  width: 60px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 3;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -30px;
+
+}
+
+
+.tooltipBetText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+
+#notification {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background-color: #ad0205;
+  /* background-color: #ba1396; */
+  z-index: 10;
+  border: 8px solid #d3b201;
+  border-radius: 12px;
+  transition: 1s;
+}
+
+.nSpan {
+  display: block;
+  position: relative;
+  top: 20%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.nBtn {
+  display: block;
+  position: relative;
+  top: 116px;
+  left: 25%;
+  width: 45%;
+  padding: 10px;
+  font-size: 32px;
+  text-align: center;
+  background-color: green;
+  border-radius: 15px;
+  box-shadow: 3px 4px rgb(0 0 0 / 25%);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.nBtn:active {
+  top: 118px;
+  left: calc(25% + 2px);
+  box-shadow: 1px 2px rgb(0 0 0 / 25%);
+}
+
+.nsWin {
+  position: absolute;
+  left: 4px;
+}
+
+.nsWinBlock {
+  display: inline-block;
+  font-size: 21px;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/*notification end*/
+
+#result {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 150px;
+  width: 400px;
+  height: 100px;
+  background-color: #ad0205;
+  /* background-color: #ba1396; */
+  z-index: 10;
+  border: 8px solid #d3b201;
+  border-radius: 12px;
+  transition: 1s;
+}
+
+/* audio SWITCH */
+
+.audio_div{
+  margin-top: 15px;
+  display: inline-block;
+  width: 50%;
+  padding: 7px;
+}
+
+.audio_span {
+  position: absolute;
+  font-size: 18px;
+  padding-left: 0;
+  margin-left: -50px;
+  /* margin-top: -3px; */
+  /* padding: 5px; */
+}
+
+.audio_switch {
+  position: absolute;
+  /* display: inline-block; */
+  width: 60px;
+  height: 34px;
+  margin-top: -7px;
+  /* margin-left: 90px; */
+  transform: scale(0.7);
+}
+
+
+.audio_switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.audio_slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.audio_slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .audio_slider {
+  background-color: #2196F3;
+}
+
+input:focus + .audio_slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .audio_slider:before {
+  
+  transform: translateX(26px);
+}
+

@@ -1,0 +1,642 @@
+/* .header{
+    background-position: center;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.card-img-filter{
+    filter:brightness(0.5)
+}
+
+ngb-carousel{
+    margin-top:-20px;
+}
+ngb-carousel img{
+    max-height: 100vh;
+    width: 100vmax;
+    object-fit: cover;
+}
+
+div.menumovil{
+    display: none;
+}
+div.menupages{
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+}
+
+nav ul li{
+    list-style: none;
+    padding-top: 2vh;
+    display: inline-block;
+    padding-left: 0;
+ }
+ nav ul li a{
+    padding-right: 3rem;
+ }
+
+ .material-icons.color_white { color: #FFFFFF; }
+
+
+@keyframes animacio1 {
+    0%   {margin:0; top:10%;transform: scale(0) rotate(0deg); opacity:0 }
+     50%  {margin:0; top:20%; transform: scale(0.5) rotate(180deg); opacity:0.5}
+    100%  { margin:0; top:30%; transform: scale(1) rotate(360deg); opacity:1}
+}
+@keyframes animacio2 {
+
+    0%  { margin:0; top:30%; }
+
+    100%  { margin:0; top:30%; }
+}
+
+.divimg{
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+.divimg .animacio{
+    background-size:100% 100%;
+	width: 22%;
+    height: 21vmax;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 88px 30px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 88px 30px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 88px 30px rgba(0,0,0,0.75);
+    border-radius:2%;
+}
+.divimg .animacio1{
+    background-image: url("../../assets/images/escenapaginaprincipal.jpg");
+
+}
+.divimg .animacio2{
+    background-image: url("../../assets/images/blackjacktable.jpg");
+    border: solid #ffffff 1px;
+
+}
+.divimg .animacio3{
+    background-image: url("../../assets/images/estrellas.png");
+
+    background-color: #02011a;
+    border: #ffdb0f 1px solid;
+}
+.divimg .animacio3:hover{
+    background-image: url("../../assets/images/estrellas.gif");
+    background-color: #000000;
+}
+.divimg .animaciogen{
+   
+    animation: animacio1 1s linear,animacio2 linear 1s 1s;;
+    animation-duration: 1s;
+    animation-iteration-count: 1, infinite;
+
+}
+@keyframes flecha {
+    0%   {bottom:-40%;visibility: visible;}
+     50%  {bottom:-15%;visibility: visible;}
+    100%  {bottom:10%;visibility: visible;}
+}
+.divimg .divflecha{
+    height: 14vh;
+    bottom: 5%;
+
+
+}
+.divimg .divflecha2{
+    animation: flecha linear 1s alternate 1s;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    visibility: hidden;
+    position: relative;
+}
+.divimg .flecha{
+    width:4vmax;
+    height: 4vmax;
+    transform: scale(0.8);
+    opacity: 0.65;
+
+}
+.divimg .flecha:hover{
+    transform: scale(0.85);
+    opacity: 1;
+    cursor: pointer;  
+}
+
+.divimg  .flechad{
+    width: 4.1vmax;
+    height: auto;
+    top: 45%;
+    right:5%;
+    opacity: 0.5;
+
+}
+.divimg  .flechai{
+    width: 4.1vmax;
+    height: auto;
+    top: 45%;
+    left:5%;
+    opacity: 0.5;
+
+}
+.divimg  .flechad:hover{
+    transform: scale(0.85);
+    opacity: 1;
+    cursor: pointer; 
+}
+.divimg  .flechai:hover{
+    transform: scale(0.85);
+    opacity: 1;
+    cursor: pointer; 
+}
+
+@keyframes lletres {
+    0%   {visibility: visible;transform: rotate(-10deg) scale(0.9);}
+    20%  {visibility: visible;}
+    40%  {visibility: visible;transform:  scale(1.3);}
+    60%  {visibility: visible;}
+    80%  { visibility: visible;}
+    100%  { visibility: visible;transform: rotate(10deg) scale(0.9);}
+}
+.divimg .animacio1 .lletra1{
+    opacity: 0.7;
+    visibility: hidden;
+	width: 46%;
+    height: 6%;
+    margin-left: 44%;
+    margin-top: 17.2%;
+    position: absolute; 
+    animation: lletres linear 2s alternate 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.divimg .animacio1 .lletra1:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+@keyframes redd {
+    0%   {left:0%; visibility: visible;}
+     50%  {left:25%; visibility: visible;}
+    100%  { left:50%; visibility: visible; }
+}
+.divimg .animacio1 .red{
+    visibility: hidden;
+
+	width: 7%;
+    height: 10%;
+    margin-left: 19%;
+    margin-top: 72.2%;
+    position: absolute; 
+    animation: redd linear 1s alternate 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes caza {
+    0%   {left:0%; top:0%;visibility: visible;}
+     50%  {left:10%; top:7%;visibility: visible;}
+    100%  { left:0%; top:8%;visibility: visible; }
+}
+.divimg .animacio1 .caza{
+    visibility: hidden;
+	width: 20%;
+    height: 26%;
+    margin-left: 9%;
+    margin-top: 9%;
+    position: absolute;
+
+    transform: rotate(140deg);
+    animation: caza linear 1s alternate 1s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes misil {
+    0%   {left:0%; top:20%; visibility: visible;}
+    20%  {left:6%; top:30%; visibility: visible;}
+    40%  {left:8%; top:39%; visibility: visible;}
+    60%  { left:10%; top:46%; visibility: visible;transform: rotate(270deg);}
+    80%  { left:10%; top:46%; visibility: visible;transform: rotate(270deg);}
+    100%  { left:10%; top:46%; visibility: visible;transform: rotate(270deg);}
+}
+@keyframes misil1 {
+    0%   {left:12%; top:9%; visibility: visible;}
+    20%  {left:24%; top:28%; visibility: visible;}
+    40%  {left:28%; top:40%; visibility: visible;transform: rotate(260deg);}
+    60%  { left:30%; top:50%; visibility: visible;transform: rotate(260deg);}
+    80%  { left:30%; top:50%; visibility: visible;transform: rotate(260deg);}
+    100%  { left:30%; top:50%; visibility: visible;transform: rotate(260deg);}
+}
+.divimg .animacio1 .misil{
+	width: 15%;
+    height: 10%;
+    margin-left: 9%;
+    margin-top: 9%;
+    position: absolute;
+    visibility: hidden;
+    transform: rotate(240deg);
+    animation: misil linear 2s 1s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.divimg .animacio1 .misil1{
+	width: 15%;
+    height: 10%;
+    margin-left: 9%;
+    margin-top: 9%;
+    position: absolute;
+    visibility: hidden;
+    transform: rotate(240deg);
+    animation: misil1 linear 2s 1s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* ANIMACIO BLACKJACK */
+@keyframes carta1 {
+    0%   {bottom:10%; visibility: visible;}
+     /* 50%  {bottom:25%; visibility: visible;} */
+    100%  { bottom:18%; visibility: visible; }
+}
+
+.divimg .animacio2 .carta1{
+    width: 18%;
+    height: auto;
+	
+    margin-left: 20%;
+    margin-top: 62%;
+    position: absolute; 
+    
+}
+.divimg .animacio2 .carta2{
+    width: 18%;
+    height: auto;
+	
+    margin-left: 42%;
+    margin-top: 62%;
+    position: absolute; 
+    
+}
+.divimg .animacio2 .carta3{
+    width: 18%;
+    height: auto;
+    margin-left: 64%;
+    margin-top: 62%;
+    position: absolute;  
+}
+
+.divimg .animacio2 .carta1:hover{
+    transform: scale(1.2);
+}
+
+.divimg .animacio2 .carta2:hover{
+    transform: scale(1.2);
+}
+
+.divimg .animacio2 .carta3:hover{
+    transform: scale(1.2);
+
+    animation: carta1 linear 1s alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes lletres2 {
+    0%   {transform:  scale(0.9);}
+    40%  {transform:  scale(1.1);}
+    100%  {transform:  scale(0.9);}
+}
+.divimg .animacio2 .lletra2{
+    opacity: 0.9;
+	width: 63%;
+    height: 6%;
+    margin-left: 18%;
+    margin-top: 17.2%;
+    position: absolute; 
+    animation: lletres2 linear 2s alternate 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.divimg .animacio2 .lletra2:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.divimg .animacio3 .paraula3{
+    opacity: 0.9;
+	width: 48%;
+    height: 9%;
+    margin-left: 24%;
+    margin-top: 4.2%;
+    position: absolute; 
+}
+
+.divimg .animacio3:hover .paraula3{
+
+    animation: lletres2 linear 2s alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ruleta {
+    0%   {  transform: rotate(0deg);}
+    100%  {  transform:rotate(360deg);}
+}
+@keyframes girar {
+    from { transform: rotate(0deg)  translate(650%) rotate(0deg); visibility: visible;}
+    to { transform: rotate(360deg) translate(650%) rotate(-360deg); visibility: visible;}
+}
+.divimg .animacio3 .ruleta{
+    left:7%;
+	width: 85%;
+    height: 85%;
+    margin-left: 0%;
+    margin-top: 13%;
+    position: absolute;
+
+    animation: ruleta linear 1s  1s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.divimg .animacio3 .girbola{
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    border-radius:50%;
+    position: absolute;
+}
+.divimg .animacio3 .girbola .pilota{
+	display:inline-block;
+    visibility: hidden;
+    width: 4.1%;
+    height: 4.35%;
+    margin-top: 52%;
+    background:#000;
+    border-radius:50%;
+    animation: girar linear 2s 1s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin-right: 0.4vh;
+}
+
+
+.btn{
+    margin-left: 34%;
+    margin-top: 35.2%;
+position: absolute;
+font-family: Roboto, sans-serif;
+font-weight: bold;
+font-size: 1.5vmax;
+color: #000000;
+background-color: #03a92a;
+padding: 5px 19px;
+border: solid #000000 2px;
+box-shadow: rgb(0, 0, 0) 0px 0px 19px 2px;
+border-radius: 50px;
+transition : 200ms;
+
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+.btn:hover{
+transition : 1859ms;
+padding: 10px 22px;
+transform : translateY(-0px);
+background-color: #126e15;
+color: #ffffff;
+border: solid 2px #cfe1e8;
+}
+.divimg .animacio2 a:hover ~ a img{
+    transform: scale(1.2);
+
+    animation: carta1 linear 1s alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    
+}
+
+@media only screen and  (max-width:1700px){
+
+    .divimg .animacio1 .red{
+        margin-left: 19%;
+        margin-top: 71.5%;   
+    }
+}
+@media only screen and  (max-width:1600px){
+    ngb-carousel img{
+        height: 150vh;
+        width: 100vmax;
+        object-fit: cover;
+    }
+    .divimg .animacio{   
+        width: 26%;
+        height: 25vmax;  
+    }
+    .divimg .animacio1 .red{
+        margin-left: 19%;
+        margin-top: 72.1%;   
+    }
+}
+@media only screen and  (max-width:1400px){
+    ngb-carousel img{
+        height: 150vh;
+        width: 100vmax;
+        object-fit: cover;
+    }
+    .divimg .animacio{
+        width: 29%;
+        height: 28vmax;  
+    }
+    .divimg .animacio1 .red{
+        margin-left: 19%;
+        margin-top: 72.5%;   
+    }
+}
+
+@media only screen and  (max-width:1150px){
+    ngb-carousel img{
+        height: 150vh;
+        width: 100vmax;
+    }
+    .divimg .animacio{
+        
+        width: 34.5vmax;
+        height: 34vmax;
+        
+    }
+    .divimg .animacio1 .red{
+        margin-left: 19%;
+        margin-top: 73.9%;   
+    }
+}
+
+@media only screen and  (max-width:950px){
+    div.menupages{
+        display: none;
+    }
+    div.menumovil{
+        display:block;
+    }
+    div.is-open{
+        width: 100%;
+        height: 100%;
+        display:block;
+    }
+    div ul{
+        text-align: center;
+    }
+    nav ul li{
+        list-style: none;
+        display: block;
+     }
+     nav ul li a{
+        padding-right: 0rem;
+     }
+     @keyframes girar {
+        from { transform: rotate(0deg)  translate(670%) rotate(0deg); visibility: visible;}
+        to { transform: rotate(360deg) translate(670%) rotate(-360deg); visibility: visible;}
+    }
+}
+@media only screen and  (max-width:900px){
+    .divimg .animacio{   
+        width: 32.5vmax;
+        height: 32vmax;  
+    }
+    @keyframes girar {
+        from { transform: rotate(0deg)  translate(645%) rotate(0deg); visibility: visible;}
+        to { transform: rotate(360deg) translate(645%) rotate(-360deg); visibility: visible;}
+    }
+    
+    .divimg .animacio3 .girbola .pilota{
+        width: 4.3%;
+        height: 4.35%;
+    }
+}
+@media only screen and  (max-width:800px){
+
+    @keyframes girar {
+        from { transform: rotate(0deg)  translate(625%) rotate(0deg); visibility: visible;}
+        to { transform: rotate(360deg) translate(625%) rotate(-360deg); visibility: visible;}
+    }
+}
+nav{
+    margin-top:20px;
+    background: rgba(49, 46, 46, 0.3); 
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+a.menu:hover{
+    color: black;
+}
+a.menu{
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+}
+.logo{
+    /* width: 20vh; */
+    width:200px;
+    cursor: pointer; 
+    margin:0px 0;
+ }
+
+a.menu {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    /* font-size: 1.5vh; */
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+a.menu {
+    position: relative;
+    padding: 16px 0;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+}
+
+a.menu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+
+a.menu:hover::before, a.menu:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+a.menutokens{
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+    cursor:context-menu;
+}
+a.menutokens:hover span{
+    color:#000000;
+}
+
+.button{
+    width: 140px;
+    border:0;
+    padding:10px 10px;
+    cursor:pointer;
+    outline:none;
+    color: white;
+    border-radius: 6px;
+    align-items:center;
+}
+a.button img{
+    width: 25px;
+    margin:0 10px
+}
+a.button:hover img{
+    display:block;
+}
+a.button:hover{
+    display:flex;
+    justify-content: space-between;
+}
+header{
+    background-color: #F7F7F7;
+}
+.container{
+    margin-top: 8vh;
+}
+.card{ 
+    border:0px;
+    transition-duration: 0.6s;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0 0);
+}
+.card-effect:hover .card{
+    clip-path: polygon(50% 0%,50% 0%, 100% 50%,100% 50%, 50% 100%,50% 100%, 0% 50%,0% 50%);
+}
+.card-img{
+    min-height: 200px;
+} 
+.imatge-logo-mitat-pag{
+    width: 25vmax;
+    min-width: 20vmax;
+    margin-bottom: 6vh;
+}
+footer{
+    background: rgb(247,247,247);
+    background: linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(224,224,224,1) 58%, rgba(204,204,204,1) 86%);
+}
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:#000000;
+    height: 1px;
+  }
+.gmail{
+    width: 1.4em;
+}
+

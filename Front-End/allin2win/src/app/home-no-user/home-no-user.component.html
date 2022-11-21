@@ -1,0 +1,231 @@
+<header class="header ">
+    <div class="container-fluid px-0">
+        <nav class="row  justify-content-between align-items-center text-uppercase w-100 position-absolute" style="z-index:1">
+            <a href="#" class="col-auto ms-auto me-auto">
+                <img alt="allin2win" class="logo " src="../assets/images/logo.png">
+            </a>
+            <div class="menupages" [class.is-open]="isMenuOpen==true">
+              <ul class="ps-0">
+                <li *ngIf="!_projectService.loggedIn()">
+                <a  href="#" class="menu ">Home</a>
+                </li>
+                <li *ngIf="!_projectService.loggedIn()">
+                <a  href="register" class="menu ">Register</a>
+                </li>
+                <li *ngIf="!_projectService.loggedIn()">
+                <a  href="login" class="menu">Login</a>
+                </li>
+                <li *ngIf="_projectService.loggedIn()">
+                <a   class=" menutokens">Tus Puntos : <span>{{this.tokens}}</span></a>
+                </li>
+                <li *ngIf="_projectService.loggedIn()">
+                <a   class=" menutokens"><span>{{this.compte}}</span></a>
+                </li>
+                <li *ngIf="_projectService.loggedIn()">
+                <a  (click)="_projectService.logoutUser()" href="#" class="menu">Logout</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto ms-auto me-auto menumovil">
+              <mat-icon class="pe-3 menu material-icons color_white" (click)="toggleMenu()">{{isMenuOpen ? "close" : "menu"}}</mat-icon>
+          </div>
+            
+
+        </nav>
+        <ngb-carousel style="z-index:0" class="w-100"  #carousel
+        [showNavigationArrows]=false [pauseOnHover]=true [pauseOnFocus]=true >
+          <ng-template ngbSlide>
+            <div class="divimg">
+              <img #image class="img-fluid " [src]="images[0]" alt="Random first slide" >
+              <div  class="animacio animacio1 animaciogen">
+                <img class="caza" src="../assets/gamblerbomber/images/caza.png">
+                <img class="misil" src="../assets/gamblerbomber/images/bomba.png">
+                <img class="misil1" src="../assets/gamblerbomber/images/bomba.png">
+                <img class="red" src="../assets/images/red.png">
+                <a href="gamblerbomber"><img class="lletra1" src="../assets/images/paraula1.png" ></a>
+              </div>
+              <img (click)="goslider('prev')" class="flechai position-absolute" src="../assets/images/flechai.png">
+              <img (click)="goslider('next')" class="flechad position-absolute" src="../assets/images/flechad.png">
+              <div class=" position-absolute  divflecha ">
+                <a (click)="scroll(target)"><div class=" h-100 divflecha2"><img class="flecha" src="../assets/images/image.png"></div></a>
+              </div>
+            </div>
+            <!-- <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div> -->
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="divimg">
+              <img #image class="img-fluid " [src]="images[1]" alt="Random first slide" >
+              <div  class="animacio animacio3">
+                
+                <img class="ruleta" src="../assets/images/ruleta.png">
+                <div class=" position-absolute girbola">                
+                  <img class="pilota" src="../assets/images/pilota.png">
+                </div>
+
+                <a href="ruleta"><img class="paraula3" src="../assets/images/paraula3.png"></a>
+
+              </div>
+              <img (click)="goslider('prev')" class="flechai position-absolute" src="../assets/images/flechai.png">
+              <img (click)="goslider('next')" class="flechad position-absolute" src="../assets/images/flechad.png">
+              <div class=" position-absolute  divflecha ">
+                <a (click)="scroll(target)"><div class=" h-100 divflecha2"><img class="flecha" src="../assets/images/image.png"></div></a>
+              </div>
+            </div>
+            
+          </ng-template>
+          <ng-template ngbSlide>
+            
+            <div class="divimg">
+              <img id="image" class="img-fluid " [src]="images[2]" alt="Random first slide" >
+              <div  class="animacio animacio2">
+                <a href="blackjack"><img class="carta1" src="../assets/blackjack/cards/7-H.png"></a>
+                <a href="blackjack"><img class="carta2" src="../assets/blackjack/cards/2-C.png"></a>
+                <a href="blackjack"><button class="btn" >JUEGA!</button></a>
+
+                <a href="blackjack"><img class="carta3" src="../assets/blackjack/cards/BACK-ALLINTOWIN.png"></a>
+
+                <img class="lletra2" src="../assets/images/paraula2.png" >
+
+              </div>
+              <img (click)="goslider('prev')" class="flechai position-absolute" src="../assets/images/flechai.png">
+              <img (click)="goslider('next')" class="flechad position-absolute" src="../assets/images/flechad.png">
+              <div class=" position-absolute  divflecha ">
+                <a (click)="scroll(target)"><div class=" h-100 divflecha2"><img class="flecha" src="../assets/images/image.png"></div></a>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+        </div>
+        <section #target class="container">
+          <div class="row justify-content-center">
+            <div  class="col-12 text-center">
+              <img src="../assets/images/logo2.png" class="imatge-logo-mitat-pag">
+            </div>
+            <article class="col-12 col-md-6 col-lg-4 mb-5 card-effect">
+              <div class="card">
+                <img src="../assets/images/bj.jpg" alt="" class="card-img card-img-filter">
+                <div class="card-img-overlay text-white d-flex  flex-column justify-content-center text-center">
+                  <h4 ><b>BlackJack</b></h4>
+                  <p><b>Juego en Desarrollo.</b> No implementado el Sistema de Economia</p>
+                  <a href="blackjack" class="text-reset">Jugar</a>
+                </div>
+              </div>
+            </article>
+            <article class="col-12 col-md-6 col-lg-4 mb-5 card-effect">
+              <div class="card">
+                <img src="../assets/images/gamblercard.jpg" alt="" class="card-img card-img-filter">
+                <div class="card-img-overlay text-white d-flex  flex-column justify-content-center text-center">
+                  <h4><b>Gamblerboomber</b></h4>
+                  <p><b>Sistema de Economía implementado.</b> Tienes 15 segundos para huir, colocate un un lugar del mapa y reza para que no te impacte un misil.</p>
+                  <a href="gamblerbomber" class="text-reset">Jugar </a>
+                </div>
+              </div>
+            </article>
+            <article class="col-12 col-md-6 col-lg-4 mb-5 card-effect">
+              <div class="card">
+                <img src="../assets/images/ruleta.jpg" alt="" class="card-img card-img-filter">
+                <div class="card-img-overlay text-white d-flex  flex-column justify-content-center text-center">
+                  <h4><b>Ruleta</b></h4>
+                  <p><b>Juego en Desarrollo.</b> No implementado el Sistema de Economia</p>
+                  <a href="ruleta" class="text-reset">Jugar</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <footer class="pt-4 pb-4">
+          <section class="container">
+            <div class="row">
+              <div class="col-md-12 col-lg-12 col-xl-12 text-center mx-auto ">
+                <h5 class="fs-6"><img class="gmail" src="../assets/images/gmail.png"> info@allin2win.com</h5>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-6  mx-auto ">
+                <div>
+                  <hr>
+                </div>
+              </div> 
+              <div class="col-md-12 col-lg-12 col-xl-12  text-center mx-auto">
+                <h4 class=" ">© 2022 Allin2Win / Aviso legal / Política de privacidad / Política de cookies</h4>
+              </div>     
+            </div>
+          </section> 
+
+           
+        </footer>
+        <!-- <div class="container">
+        <div class="row align-items-center pt-5 pb-5" >
+            <div class="col-6  ">
+                <div class="card">
+                    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                      <img src="../assets/images/gamblerb.jpg" class="img-fluid"/>
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Gamblerboomber</h5>
+                      <p class="card-text">Incrementa tus creditos sobreviviendo<br> a ataques 
+                        aereos de aviones de combate!</p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6  ">
+                <div class="card">
+                    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                        <img src="../assets/images/gamblerb.jpg" class="img-fluid"/>
+                        <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gamblerboomber</h5>
+                        <p class="card-text">Incrementa tus creditos sobreviviendo<br> a ataques 
+                        aereos de aviones de combate!</p>
+                        <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+            </div>      
+
+            
+        </div>
+        <div class="row align-items-center " >
+            <div class="col-6  ">
+                <div class="card">
+                    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                      <img src="../assets/images/bj.jpg" class="img-fluid"/>
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6  ">
+                <div class="card">
+                    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                      <img src="../assets/images/bj.jpg" class="img-fluid"/>
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+        
+    </div> -->
+    
+</header>
